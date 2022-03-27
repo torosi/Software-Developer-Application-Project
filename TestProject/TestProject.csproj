@@ -1,0 +1,1015 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="..\packages\EntityFramework.6.4.4\build\EntityFramework.props" Condition="Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{5D22A804-7919-407F-A748-4960225AED4F}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>TestProject</RootNamespace>
+    <AssemblyName>TestProject</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <Use64BitIISExpress />
+    <IISExpressSSLPort>44319</IISExpressSSLPort>
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="AspNet.ScriptManager.bootstrap">
+      <HintPath>..\packages\AspNet.ScriptManager.bootstrap.3.4.1\lib\net45\AspNet.ScriptManager.bootstrap.dll</HintPath>
+    </Reference>
+    <Reference Include="AspNet.ScriptManager.jQuery">
+      <HintPath>..\packages\AspNet.ScriptManager.jQuery.3.4.1\lib\net45\AspNet.ScriptManager.jQuery.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ScriptManager.MSAjax">
+      <HintPath>..\packages\Microsoft.AspNet.ScriptManager.MSAjax.5.0.0\lib\net45\Microsoft.ScriptManager.MSAjax.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ScriptManager.WebForms">
+      <HintPath>..\packages\Microsoft.AspNet.ScriptManager.WebForms.5.0.0\lib\net45\Microsoft.ScriptManager.WebForms.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Optimization, Version=1.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35">
+      <HintPath>..\packages\Microsoft.AspNet.Web.Optimization.1.1.3\lib\net40\System.Web.Optimization.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\packages\Newtonsoft.Json.12.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="WebGrease">
+      <Private>True</Private>
+      <HintPath>..\packages\WebGrease.1.6.0\lib\WebGrease.dll</HintPath>
+    </Reference>
+    <Reference Include="Antlr3.Runtime">
+      <Private>True</Private>
+      <HintPath>..\packages\Antlr.3.5.0.2\lib\Antlr3.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Web.Optimization.WebForms">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Web.Optimization.WebForms.1.1.3\lib\net45\Microsoft.AspNet.Web.Optimization.WebForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.FriendlyUrls">
+      <HintPath>..\packages\Microsoft.AspNet.FriendlyUrls.Core.1.0.2\lib\net45\Microsoft.AspNet.FriendlyUrls.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework">
+      <HintPath>..\packages\EntityFramework.6.4.4\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer">
+      <HintPath>..\packages\EntityFramework.6.4.4\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.Core">
+      <HintPath>..\packages\Microsoft.AspNet.Identity.Core.2.2.3\lib\net45\Microsoft.AspNet.Identity.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.Owin">
+      <HintPath>..\packages\Microsoft.AspNet.Identity.Owin.2.2.3\lib\net45\Microsoft.AspNet.Identity.Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.EntityFramework">
+      <HintPath>..\packages\Microsoft.AspNet.Identity.EntityFramework.2.2.3\lib\net45\Microsoft.AspNet.Identity.EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="Owin">
+      <HintPath>..\packages\Owin.1.0\lib\net40\Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin">
+      <HintPath>..\packages\Microsoft.Owin.4.0.1\lib\net45\Microsoft.Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Host.SystemWeb">
+      <HintPath>..\packages\Microsoft.Owin.Host.SystemWeb.4.0.1\lib\net45\Microsoft.Owin.Host.SystemWeb.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security">
+      <HintPath>..\packages\Microsoft.Owin.Security.4.0.1\lib\net45\Microsoft.Owin.Security.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.Cookies">
+      <HintPath>..\packages\Microsoft.Owin.Security.Facebook.4.0.1\lib\net45\Microsoft.Owin.Security.Facebook.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.Cookies">
+      <HintPath>..\packages\Microsoft.Owin.Security.Cookies.4.0.1\lib\net45\Microsoft.Owin.Security.Cookies.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.Google">
+      <HintPath>..\packages\Microsoft.Owin.Security.Google.4.0.1\lib\net45\Microsoft.Owin.Security.Google.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.Twitter">
+      <HintPath>..\packages\Microsoft.Owin.Security.Twitter.4.0.1\lib\net45\Microsoft.Owin.Security.Twitter.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.MicrosoftAccount">
+      <HintPath>..\packages\Microsoft.Owin.Security.MicrosoftAccount.4.0.1\lib\net45\Microsoft.Owin.Security.MicrosoftAccount.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.OAuth">
+      <HintPath>..\packages\Microsoft.Owin.Security.OAuth.4.0.1\lib\net45\Microsoft.Owin.Security.OAuth.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="About.aspx" />
+    <Content Include="Account\AddPhoneNumber.aspx" />
+    <Content Include="Account\Confirm.aspx" />
+    <Content Include="Account\Forgot.aspx" />
+    <Content Include="Account\Lockout.aspx" />
+    <Content Include="Account\Login.aspx" />
+    <Content Include="Account\Manage.aspx" />
+    <Content Include="Account\ManageLogins.aspx" />
+    <Content Include="Account\ManagePassword.aspx" />
+    <Content Include="Account\OpenAuthProviders.ascx" />
+    <Content Include="Account\Register.aspx" />
+    <Content Include="Account\RegisterExternalLogin.aspx" />
+    <Content Include="Account\ResetPassword.aspx" />
+    <Content Include="Account\ResetPasswordConfirmation.aspx" />
+    <Content Include="Account\TwoFactorAuthenticationSignIn.aspx" />
+    <Content Include="Account\VerifyPhoneNumber.aspx" />
+    <Content Include="Contact.aspx" />
+    <Content Include="Content\bootstrap-theme.css" />
+    <Content Include="Content\bootstrap-theme.min.css" />
+    <Content Include="Content\bootstrap.css" />
+    <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\foundation-float.css" />
+    <Content Include="Content\foundation-float.min.css" />
+    <Content Include="Content\foundation-icons\foundation-icons.css" />
+    <Content Include="Content\foundation-icons\foundation-icons.svg" />
+    <Content Include="Content\foundation-icons\preview.html" />
+    <Content Include="Content\foundation-icons\svgs\fi-address-book.svg" />
+    <Content Include="Content\foundation-icons\svgs\fi-alert.svg" />
+    <Content Include="Content\foundation-icons\svgs\fi-align-center.svg" />
+    <Content Include="Content\foundation-icons\svgs\fi-align-justify.svg" />
+    <Content Include="Content\foundation-icons\svgs\fi-align-left.svg" />
+    <Content Include="Content\foundation-icons\svgs\fi-align-right.svg" />
+    <Content Include="Content\foundation-icons\svgs\fi-anchor.svg" />
+    <Content Include="Content\foundation-icons\svgs\fi-annotate.svg" />
+    <Content Include="Content\foundation-icons\svgs\fi-archive.svg" />
+    <Content Include="Content\foundation-icons\svgs\fi-arrow-down.svg" />
+    <Content Include="Content\foundation-icons\svgs\fi-arrow-left.svg" />
+    <Content Include="Content\foundation-icons\svgs\fi-arrow-right.svg" />
+    <Content Include="Content\foundation-icons\svgs\fi-arrow-up.svg" />
+    <Content Include="Content\foundation-icons\svgs\fi-arrows-compress.svg" />
+    <Content Include="Content\foundation-icons\svgs\fi-arrows-expand.svg" />
+    <Content Include="Content\foundation-icons\svgs\fi-arrows-in.svg" />
+    <Content Include="Content\foundation-icons\svgs\fi-arrows-out.svg" />
+    <Content Include="Content\foundation-icons\svgs\fi-asl.svg" />
+    <Content Include="Content\foundation-icons\svgs\fi-asterisk.svg" />
+    <Content Include="Content\foundation-icons\svgs\fi-at-sign.svg" />
+    <Content Include="Content\foundation-icons\svgs\fi-background-color.svg" />
+    <Content Include="Content\foundation-icons\svgs\fi-battery-empty.svg" />
+    <Content Include="Content\foundation-icons\svgs\fi-battery-full.svg" />
+    <Content Include="Content\foundation-icons\svgs\fi-battery-half.svg" />
+    <Content Include="Content\foundation-icons\svgs\fi-bitcoin-circle.svg" />
+    <Content Include="Content\foundation-icons\svgs\fi-bitcoin.svg" />
+    <Content Include="Content\foundation-icons\svgs\fi-blind.svg" />
+    <Content Include="Content\foundation-icons\svgs\fi-bluetooth.svg" />
+    <Content Include="Content\foundation-icons\svgs\fi-bold.svg" />
+    <Content Include="Content\foundation-icons\svgs\fi-book-bookmark.svg" />
+    <Content Include="Content\foundation-icons\svgs\fi-book.svg" />
+    <Content Include="Content\foundation-icons\svgs\fi-bookmark.svg" />
+    <Content Include="Content\foundation-icons\svgs\fi-braille.svg" />
+    <Content Include="Content\foundation-icons\svgs\fi-burst-new.svg" />
+    <Content Include="Content\foundation-icons\svgs\fi-burst-sale.svg" />
+    <Content Include="Content\foundation-icons\svgs\fi-burst.svg" />
+    <Content Include="Content\foundation-icons\svgs\fi-calendar.svg" />
+    <Content Include="Content\foundation-icons\svgs\fi-camera.svg" />
+    <Content Include="Content\foundation-icons\svgs\fi-check.svg" />
+    <Content Include="Content\foundation-icons\svgs\fi-checkbox.svg" />
+    <Content Include="Content\foundation-icons\svgs\fi-clipboard-notes.svg" />
+    <Content Include="Content\foundation-icons\svgs\fi-clipboard-pencil.svg" />
+    <Content Include="Content\foundation-icons\svgs\fi-clipboard.svg" />
+    <Content Include="Content\foundation-icons\svgs\fi-clock.svg" />
+    <Content Include="Content\foundation-icons\svgs\fi-closed-caption.svg" />
+    <Content Include="Content\foundation-icons\svgs\fi-cloud.svg" />
+    <Content Include="Content\foundation-icons\svgs\fi-comment-minus.svg" />
+    <Content Include="Content\foundation-icons\svgs\fi-comment-quotes.svg" />
+    <Content Include="Content\foundation-icons\svgs\fi-comment-video.svg" />
+    <Content Include="Content\foundation-icons\svgs\fi-comment.svg" />
+    <Content Include="Content\foundation-icons\svgs\fi-comments.svg" />
+    <Content Include="Content\foundation-icons\svgs\fi-compass.svg" />
+    <Content Include="Content\foundation-icons\svgs\fi-contrast.svg" />
+    <Content Include="Content\foundation-icons\svgs\fi-credit-card.svg" />
+    <Content Include="Content\foundation-icons\svgs\fi-crop.svg" />
+    <Content Include="Content\foundation-icons\svgs\fi-crown.svg" />
+    <Content Include="Content\foundation-icons\svgs\fi-css3.svg" />
+    <Content Include="Content\foundation-icons\svgs\fi-database.svg" />
+    <Content Include="Content\foundation-icons\svgs\fi-die-five.svg" />
+    <Content Include="Content\foundation-icons\svgs\fi-die-four.svg" />
+    <Content Include="Content\foundation-icons\svgs\fi-die-one.svg" />
+    <Content Include="Content\foundation-icons\svgs\fi-die-six.svg" />
+    <Content Include="Content\foundation-icons\svgs\fi-die-three.svg" />
+    <Content Include="Content\foundation-icons\svgs\fi-die-two.svg" />
+    <Content Include="Content\foundation-icons\svgs\fi-dislike.svg" />
+    <Content Include="Content\foundation-icons\svgs\fi-dollar-bill.svg" />
+    <Content Include="Content\foundation-icons\svgs\fi-dollar.svg" />
+    <Content Include="Content\foundation-icons\svgs\fi-download.svg" />
+    <Content Include="Content\foundation-icons\svgs\fi-eject.svg" />
+    <Content Include="Content\foundation-icons\svgs\fi-elevator.svg" />
+    <Content Include="Content\foundation-icons\svgs\fi-euro.svg" />
+    <Content Include="Content\foundation-icons\svgs\fi-eye.svg" />
+    <Content Include="Content\foundation-icons\svgs\fi-fast-forward.svg" />
+    <Content Include="Content\foundation-icons\svgs\fi-female-symbol.svg" />
+    <Content Include="Content\foundation-icons\svgs\fi-female.svg" />
+    <Content Include="Content\foundation-icons\svgs\fi-filter.svg" />
+    <Content Include="Content\foundation-icons\svgs\fi-first-aid.svg" />
+    <Content Include="Content\foundation-icons\svgs\fi-flag.svg" />
+    <Content Include="Content\foundation-icons\svgs\fi-folder-add.svg" />
+    <Content Include="Content\foundation-icons\svgs\fi-folder-lock.svg" />
+    <Content Include="Content\foundation-icons\svgs\fi-folder.svg" />
+    <Content Include="Content\foundation-icons\svgs\fi-foot.svg" />
+    <Content Include="Content\foundation-icons\svgs\fi-foundation.svg" />
+    <Content Include="Content\foundation-icons\svgs\fi-graph-bar.svg" />
+    <Content Include="Content\foundation-icons\svgs\fi-graph-horizontal.svg" />
+    <Content Include="Content\foundation-icons\svgs\fi-graph-pie.svg" />
+    <Content Include="Content\foundation-icons\svgs\fi-graph-trend.svg" />
+    <Content Include="Content\foundation-icons\svgs\fi-guide-dog.svg" />
+    <Content Include="Content\foundation-icons\svgs\fi-hearing-aid.svg" />
+    <Content Include="Content\foundation-icons\svgs\fi-heart.svg" />
+    <Content Include="Content\foundation-icons\svgs\fi-home.svg" />
+    <Content Include="Content\foundation-icons\svgs\fi-html5.svg" />
+    <Content Include="Content\foundation-icons\svgs\fi-indent-less.svg" />
+    <Content Include="Content\foundation-icons\svgs\fi-indent-more.svg" />
+    <Content Include="Content\foundation-icons\svgs\fi-info.svg" />
+    <Content Include="Content\foundation-icons\svgs\fi-italic.svg" />
+    <Content Include="Content\foundation-icons\svgs\fi-key.svg" />
+    <Content Include="Content\foundation-icons\svgs\fi-laptop.svg" />
+    <Content Include="Content\foundation-icons\svgs\fi-layout.svg" />
+    <Content Include="Content\foundation-icons\svgs\fi-lightbulb.svg" />
+    <Content Include="Content\foundation-icons\svgs\fi-like.svg" />
+    <Content Include="Content\foundation-icons\svgs\fi-link.svg" />
+    <Content Include="Content\foundation-icons\svgs\fi-list-bullet.svg" />
+    <Content Include="Content\foundation-icons\svgs\fi-list-number.svg" />
+    <Content Include="Content\foundation-icons\svgs\fi-list-thumbnails.svg" />
+    <Content Include="Content\foundation-icons\svgs\fi-list.svg" />
+    <Content Include="Content\foundation-icons\svgs\fi-lock.svg" />
+    <Content Include="Content\foundation-icons\svgs\fi-loop.svg" />
+    <Content Include="Content\foundation-icons\svgs\fi-magnifying-glass.svg" />
+    <Content Include="Content\foundation-icons\svgs\fi-mail.svg" />
+    <Content Include="Content\foundation-icons\svgs\fi-male-female.svg" />
+    <Content Include="Content\foundation-icons\svgs\fi-male-symbol.svg" />
+    <Content Include="Content\foundation-icons\svgs\fi-male.svg" />
+    <Content Include="Content\foundation-icons\svgs\fi-map.svg" />
+    <Content Include="Content\foundation-icons\svgs\fi-marker.svg" />
+    <Content Include="Content\foundation-icons\svgs\fi-megaphone.svg" />
+    <Content Include="Content\foundation-icons\svgs\fi-microphone.svg" />
+    <Content Include="Content\foundation-icons\svgs\fi-minus-circle.svg" />
+    <Content Include="Content\foundation-icons\svgs\fi-minus.svg" />
+    <Content Include="Content\foundation-icons\svgs\fi-mobile-signal.svg" />
+    <Content Include="Content\foundation-icons\svgs\fi-mobile.svg" />
+    <Content Include="Content\foundation-icons\svgs\fi-monitor.svg" />
+    <Content Include="Content\foundation-icons\svgs\fi-mountains.svg" />
+    <Content Include="Content\foundation-icons\svgs\fi-music.svg" />
+    <Content Include="Content\foundation-icons\svgs\fi-next.svg" />
+    <Content Include="Content\foundation-icons\svgs\fi-no-dogs.svg" />
+    <Content Include="Content\foundation-icons\svgs\fi-no-smoking.svg" />
+    <Content Include="Content\foundation-icons\svgs\fi-page-add.svg" />
+    <Content Include="Content\foundation-icons\svgs\fi-page-copy.svg" />
+    <Content Include="Content\foundation-icons\svgs\fi-page-csv.svg" />
+    <Content Include="Content\foundation-icons\svgs\fi-page-delete.svg" />
+    <Content Include="Content\foundation-icons\svgs\fi-page-doc.svg" />
+    <Content Include="Content\foundation-icons\svgs\fi-page-edit.svg" />
+    <Content Include="Content\foundation-icons\svgs\fi-page-export-csv.svg" />
+    <Content Include="Content\foundation-icons\svgs\fi-page-export-doc.svg" />
+    <Content Include="Content\foundation-icons\svgs\fi-page-export-pdf.svg" />
+    <Content Include="Content\foundation-icons\svgs\fi-page-export.svg" />
+    <Content Include="Content\foundation-icons\svgs\fi-page-filled.svg" />
+    <Content Include="Content\foundation-icons\svgs\fi-page-multiple.svg" />
+    <Content Include="Content\foundation-icons\svgs\fi-page-pdf.svg" />
+    <Content Include="Content\foundation-icons\svgs\fi-page-remove.svg" />
+    <Content Include="Content\foundation-icons\svgs\fi-page-search.svg" />
+    <Content Include="Content\foundation-icons\svgs\fi-page.svg" />
+    <Content Include="Content\foundation-icons\svgs\fi-paint-bucket.svg" />
+    <Content Include="Content\foundation-icons\svgs\fi-paperclip.svg" />
+    <Content Include="Content\foundation-icons\svgs\fi-pause.svg" />
+    <Content Include="Content\foundation-icons\svgs\fi-paw.svg" />
+    <Content Include="Content\foundation-icons\svgs\fi-paypal.svg" />
+    <Content Include="Content\foundation-icons\svgs\fi-pencil.svg" />
+    <Content Include="Content\foundation-icons\svgs\fi-photo.svg" />
+    <Content Include="Content\foundation-icons\svgs\fi-play-circle.svg" />
+    <Content Include="Content\foundation-icons\svgs\fi-play-video.svg" />
+    <Content Include="Content\foundation-icons\svgs\fi-play.svg" />
+    <Content Include="Content\foundation-icons\svgs\fi-plus.svg" />
+    <Content Include="Content\foundation-icons\svgs\fi-pound.svg" />
+    <Content Include="Content\foundation-icons\svgs\fi-power.svg" />
+    <Content Include="Content\foundation-icons\svgs\fi-previous.svg" />
+    <Content Include="Content\foundation-icons\svgs\fi-price-tag.svg" />
+    <Content Include="Content\foundation-icons\svgs\fi-pricetag-multiple.svg" />
+    <Content Include="Content\foundation-icons\svgs\fi-print.svg" />
+    <Content Include="Content\foundation-icons\svgs\fi-prohibited.svg" />
+    <Content Include="Content\foundation-icons\svgs\fi-projection-screen.svg" />
+    <Content Include="Content\foundation-icons\svgs\fi-puzzle.svg" />
+    <Content Include="Content\foundation-icons\svgs\fi-quote.svg" />
+    <Content Include="Content\foundation-icons\svgs\fi-record.svg" />
+    <Content Include="Content\foundation-icons\svgs\fi-refresh.svg" />
+    <Content Include="Content\foundation-icons\svgs\fi-results-demographics.svg" />
+    <Content Include="Content\foundation-icons\svgs\fi-results.svg" />
+    <Content Include="Content\foundation-icons\svgs\fi-rewind-ten.svg" />
+    <Content Include="Content\foundation-icons\svgs\fi-rewind.svg" />
+    <Content Include="Content\foundation-icons\svgs\fi-rss.svg" />
+    <Content Include="Content\foundation-icons\svgs\fi-safety-cone.svg" />
+    <Content Include="Content\foundation-icons\svgs\fi-save.svg" />
+    <Content Include="Content\foundation-icons\svgs\fi-share.svg" />
+    <Content Include="Content\foundation-icons\svgs\fi-sheriff-badge.svg" />
+    <Content Include="Content\foundation-icons\svgs\fi-shield.svg" />
+    <Content Include="Content\foundation-icons\svgs\fi-shopping-bag.svg" />
+    <Content Include="Content\foundation-icons\svgs\fi-shopping-cart.svg" />
+    <Content Include="Content\foundation-icons\svgs\fi-shuffle.svg" />
+    <Content Include="Content\foundation-icons\svgs\fi-skull.svg" />
+    <Content Include="Content\foundation-icons\svgs\fi-social-500px.svg" />
+    <Content Include="Content\foundation-icons\svgs\fi-social-adobe.svg" />
+    <Content Include="Content\foundation-icons\svgs\fi-social-amazon.svg" />
+    <Content Include="Content\foundation-icons\svgs\fi-social-android.svg" />
+    <Content Include="Content\foundation-icons\svgs\fi-social-apple.svg" />
+    <Content Include="Content\foundation-icons\svgs\fi-social-behance.svg" />
+    <Content Include="Content\foundation-icons\svgs\fi-social-bing.svg" />
+    <Content Include="Content\foundation-icons\svgs\fi-social-blogger.svg" />
+    <Content Include="Content\foundation-icons\svgs\fi-social-delicious.svg" />
+    <Content Include="Content\foundation-icons\svgs\fi-social-designer-news.svg" />
+    <Content Include="Content\foundation-icons\svgs\fi-social-deviant-art.svg" />
+    <Content Include="Content\foundation-icons\svgs\fi-social-digg.svg" />
+    <Content Include="Content\foundation-icons\svgs\fi-social-dribbble.svg" />
+    <Content Include="Content\foundation-icons\svgs\fi-social-drive.svg" />
+    <Content Include="Content\foundation-icons\svgs\fi-social-dropbox.svg" />
+    <Content Include="Content\foundation-icons\svgs\fi-social-evernote.svg" />
+    <Content Include="Content\foundation-icons\svgs\fi-social-facebook.svg" />
+    <Content Include="Content\foundation-icons\svgs\fi-social-flickr.svg" />
+    <Content Include="Content\foundation-icons\svgs\fi-social-forrst.svg" />
+    <Content Include="Content\foundation-icons\svgs\fi-social-foursquare.svg" />
+    <Content Include="Content\foundation-icons\svgs\fi-social-game-center.svg" />
+    <Content Include="Content\foundation-icons\svgs\fi-social-github.svg" />
+    <Content Include="Content\foundation-icons\svgs\fi-social-google-plus.svg" />
+    <Content Include="Content\foundation-icons\svgs\fi-social-hacker-news.svg" />
+    <Content Include="Content\foundation-icons\svgs\fi-social-hi5.svg" />
+    <Content Include="Content\foundation-icons\svgs\fi-social-instagram.svg" />
+    <Content Include="Content\foundation-icons\svgs\fi-social-joomla.svg" />
+    <Content Include="Content\foundation-icons\svgs\fi-social-lastfm.svg" />
+    <Content Include="Content\foundation-icons\svgs\fi-social-linkedin.svg" />
+    <Content Include="Content\foundation-icons\svgs\fi-social-medium.svg" />
+    <Content Include="Content\foundation-icons\svgs\fi-social-myspace.svg" />
+    <Content Include="Content\foundation-icons\svgs\fi-social-orkut.svg" />
+    <Content Include="Content\foundation-icons\svgs\fi-social-path.svg" />
+    <Content Include="Content\foundation-icons\svgs\fi-social-picasa.svg" />
+    <Content Include="Content\foundation-icons\svgs\fi-social-pinterest.svg" />
+    <Content Include="Content\foundation-icons\svgs\fi-social-rdio.svg" />
+    <Content Include="Content\foundation-icons\svgs\fi-social-reddit.svg" />
+    <Content Include="Content\foundation-icons\svgs\fi-social-skillshare.svg" />
+    <Content Include="Content\foundation-icons\svgs\fi-social-skype.svg" />
+    <Content Include="Content\foundation-icons\svgs\fi-social-smashing-mag.svg" />
+    <Content Include="Content\foundation-icons\svgs\fi-social-snapchat.svg" />
+    <Content Include="Content\foundation-icons\svgs\fi-social-spotify.svg" />
+    <Content Include="Content\foundation-icons\svgs\fi-social-squidoo.svg" />
+    <Content Include="Content\foundation-icons\svgs\fi-social-stack-overflow.svg" />
+    <Content Include="Content\foundation-icons\svgs\fi-social-steam.svg" />
+    <Content Include="Content\foundation-icons\svgs\fi-social-stumbleupon.svg" />
+    <Content Include="Content\foundation-icons\svgs\fi-social-treehouse.svg" />
+    <Content Include="Content\foundation-icons\svgs\fi-social-tumblr.svg" />
+    <Content Include="Content\foundation-icons\svgs\fi-social-twitter.svg" />
+    <Content Include="Content\foundation-icons\svgs\fi-social-vimeo.svg" />
+    <Content Include="Content\foundation-icons\svgs\fi-social-windows.svg" />
+    <Content Include="Content\foundation-icons\svgs\fi-social-xbox.svg" />
+    <Content Include="Content\foundation-icons\svgs\fi-social-yahoo.svg" />
+    <Content Include="Content\foundation-icons\svgs\fi-social-yelp.svg" />
+    <Content Include="Content\foundation-icons\svgs\fi-social-youtube.svg" />
+    <Content Include="Content\foundation-icons\svgs\fi-social-zerply.svg" />
+    <Content Include="Content\foundation-icons\svgs\fi-social-zurb.svg" />
+    <Content Include="Content\foundation-icons\svgs\fi-sound.svg" />
+    <Content Include="Content\foundation-icons\svgs\fi-star.svg" />
+    <Content Include="Content\foundation-icons\svgs\fi-stop.svg" />
+    <Content Include="Content\foundation-icons\svgs\fi-strikethrough.svg" />
+    <Content Include="Content\foundation-icons\svgs\fi-subscript.svg" />
+    <Content Include="Content\foundation-icons\svgs\fi-superscript.svg" />
+    <Content Include="Content\foundation-icons\svgs\fi-tablet-landscape.svg" />
+    <Content Include="Content\foundation-icons\svgs\fi-tablet-portrait.svg" />
+    <Content Include="Content\foundation-icons\svgs\fi-target-two.svg" />
+    <Content Include="Content\foundation-icons\svgs\fi-target.svg" />
+    <Content Include="Content\foundation-icons\svgs\fi-telephone-accessible.svg" />
+    <Content Include="Content\foundation-icons\svgs\fi-telephone.svg" />
+    <Content Include="Content\foundation-icons\svgs\fi-text-color.svg" />
+    <Content Include="Content\foundation-icons\svgs\fi-thumbnails.svg" />
+    <Content Include="Content\foundation-icons\svgs\fi-ticket.svg" />
+    <Content Include="Content\foundation-icons\svgs\fi-torso-business.svg" />
+    <Content Include="Content\foundation-icons\svgs\fi-torso-female.svg" />
+    <Content Include="Content\foundation-icons\svgs\fi-torso.svg" />
+    <Content Include="Content\foundation-icons\svgs\fi-torsos-all-female.svg" />
+    <Content Include="Content\foundation-icons\svgs\fi-torsos-all.svg" />
+    <Content Include="Content\foundation-icons\svgs\fi-torsos-female-male.svg" />
+    <Content Include="Content\foundation-icons\svgs\fi-torsos-male-female.svg" />
+    <Content Include="Content\foundation-icons\svgs\fi-torsos.svg" />
+    <Content Include="Content\foundation-icons\svgs\fi-trash.svg" />
+    <Content Include="Content\foundation-icons\svgs\fi-trees.svg" />
+    <Content Include="Content\foundation-icons\svgs\fi-trophy.svg" />
+    <Content Include="Content\foundation-icons\svgs\fi-underline.svg" />
+    <Content Include="Content\foundation-icons\svgs\fi-universal-access.svg" />
+    <Content Include="Content\foundation-icons\svgs\fi-unlink.svg" />
+    <Content Include="Content\foundation-icons\svgs\fi-unlock.svg" />
+    <Content Include="Content\foundation-icons\svgs\fi-upload-cloud.svg" />
+    <Content Include="Content\foundation-icons\svgs\fi-upload.svg" />
+    <Content Include="Content\foundation-icons\svgs\fi-usb.svg" />
+    <Content Include="Content\foundation-icons\svgs\fi-video.svg" />
+    <Content Include="Content\foundation-icons\svgs\fi-volume-none.svg" />
+    <Content Include="Content\foundation-icons\svgs\fi-volume-strike.svg" />
+    <Content Include="Content\foundation-icons\svgs\fi-volume.svg" />
+    <Content Include="Content\foundation-icons\svgs\fi-web.svg" />
+    <Content Include="Content\foundation-icons\svgs\fi-wheelchair.svg" />
+    <Content Include="Content\foundation-icons\svgs\fi-widget.svg" />
+    <Content Include="Content\foundation-icons\svgs\fi-wrench.svg" />
+    <Content Include="Content\foundation-icons\svgs\fi-x-circle.svg" />
+    <Content Include="Content\foundation-icons\svgs\fi-x.svg" />
+    <Content Include="Content\foundation-icons\svgs\fi-yen.svg" />
+    <Content Include="Content\foundation-icons\svgs\fi-zoom-in.svg" />
+    <Content Include="Content\foundation-icons\svgs\fi-zoom-out.svg" />
+    <Content Include="Content\foundation-prototype.css" />
+    <Content Include="Content\foundation-prototype.min.css" />
+    <Content Include="Content\foundation-rtl.css" />
+    <Content Include="Content\foundation-rtl.min.css" />
+    <Content Include="Content\foundation.css" />
+    <Content Include="Content\foundation.min.css" />
+    <Content Include="Content\Images\banner.png" />
+    <Content Include="Content\Images\box1.png" />
+    <Content Include="Content\Images\Box2.png" />
+    <Content Include="Content\Images\Box3.png" />
+    <Content Include="Content\Images\Box4.png" />
+    <Content Include="Content\Images\logo.png" />
+    <Content Include="Content\Images\Offer1.png" />
+    <Content Include="Content\Images\Offer2.png" />
+    <Content Include="Content\Images\Offer3.png" />
+    <Content Include="Content\Images\Product1.png" />
+    <Content Include="Content\Images\Product2.png" />
+    <Content Include="Content\Images\Product3.png" />
+    <Content Include="Content\Images\Product4.png" />
+    <Content Include="Content\Site.css" />
+    <Content Include="Default.aspx" />
+    <Content Include="EditHome.aspx" />
+    <Content Include="favicon.ico" />
+    <Content Include="fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Global.asax" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="Content\bootstrap.min.css.map" />
+    <Content Include="Content\bootstrap.css.map" />
+    <Content Include="Content\bootstrap-theme.min.css.map" />
+    <Content Include="Content\bootstrap-theme.css.map" />
+    <Content Include="Account\Web.config" />
+    <Content Include="Scripts\foundation.cjs.js" />
+    <Content Include="Scripts\foundation.es6.js" />
+    <Content Include="Scripts\foundation.esm.js" />
+    <Content Include="Scripts\foundation.js" />
+    <Content Include="Scripts\foundation.min.js" />
+    <Content Include="Scripts\foundation.min.js.map" />
+    <Content Include="Content\foundation-sites\xy-grid\_layout.scss" />
+    <Content Include="Content\foundation-sites\xy-grid\_position.scss" />
+    <Content Include="Content\foundation-sites\xy-grid\_xy-grid.scss" />
+    <Content Include="Content\foundation-sites\_global.scss" />
+    <Content Include="Content\foundation.css.map" />
+    <Content Include="Content\foundation.min.css.map" />
+    <Content Include="Content\_vendor\sassy-lists\stylesheets\functions\_contain.scss" />
+    <Content Include="Content\_vendor\sassy-lists\stylesheets\functions\_purge.scss" />
+    <Content Include="Content\_vendor\sassy-lists\stylesheets\functions\_remove.scss" />
+    <Content Include="Content\_vendor\sassy-lists\stylesheets\functions\_replace.scss" />
+    <Content Include="Content\_vendor\sassy-lists\stylesheets\functions\_to-list.scss" />
+    <Content Include="Content\_vendor\sassy-lists\stylesheets\helpers\_missing-dependencies.scss" />
+    <Content Include="Content\_vendor\sassy-lists\stylesheets\helpers\_true.scss" />
+    <Content Include="Scripts\foundation.cjs.js.map" />
+    <Content Include="Scripts\foundation.es6.js.map" />
+    <Content Include="Scripts\foundation.esm.js.map" />
+    <Content Include="Scripts\foundation.js.map" />
+    <Content Include="Content\foundation-sites\xy-grid\_gutters.scss" />
+    <Content Include="Content\foundation-sites\xy-grid\_grid.scss" />
+    <Content Include="Content\foundation-sites\xy-grid\_frame.scss" />
+    <Content Include="Content\foundation-sites\xy-grid\_collapse.scss" />
+    <Content Include="Content\foundation-sites\xy-grid\_classes.scss" />
+    <Content Include="Content\foundation-sites\xy-grid\_cell.scss" />
+    <Content Include="Content\foundation-sites\vendor\normalize.scss" />
+    <Content Include="Content\foundation-sites\util\_value.scss" />
+    <Content Include="Content\foundation-sites\util\_util.scss" />
+    <Content Include="Content\foundation-sites\util\_unit.scss" />
+    <Content Include="Content\foundation-sites\util\_typography.scss" />
+    <Content Include="Content\foundation-sites\util\_selector.scss" />
+    <Content Include="Content\foundation-sites\util\_mixins.scss" />
+    <Content Include="Content\foundation-sites\util\_math.scss" />
+    <Content Include="Content\foundation-sites\util\_flex.scss" />
+    <Content Include="Content\foundation-sites\util\_direction.scss" />
+    <Content Include="Content\foundation-sites\util\_color.scss" />
+    <Content Include="Content\foundation-sites\util\_breakpoint.scss" />
+    <Content Include="Content\foundation-sites\typography\_typography.scss" />
+    <Content Include="Content\foundation-sites\typography\_print.scss" />
+    <Content Include="Content\foundation-sites\typography\_helpers.scss" />
+    <Content Include="Content\foundation-sites\typography\_base.scss" />
+    <Content Include="Content\foundation-sites\typography\_alignment.scss" />
+    <Content Include="Content\foundation-sites\settings\_settings.scss" />
+    <Content Include="Content\foundation-sites\prototype\_text-utilities.scss" />
+    <Content Include="Content\foundation-sites\prototype\_text-transformation.scss" />
+    <Content Include="Content\foundation-sites\prototype\_text-decoration.scss" />
+    <Content Include="Content\foundation-sites\prototype\_spacing.scss" />
+    <Content Include="Content\foundation-sites\prototype\_sizing.scss" />
+    <Content Include="Content\foundation-sites\prototype\_shadow.scss" />
+    <Content Include="Content\foundation-sites\prototype\_separator.scss" />
+    <Content Include="Content\foundation-sites\prototype\_rounded.scss" />
+    <Content Include="Content\foundation-sites\prototype\_rotate.scss" />
+    <Content Include="Content\foundation-sites\prototype\_relation.scss" />
+    <Content Include="Content\foundation-sites\prototype\_prototype.scss" />
+    <Content Include="Content\foundation-sites\prototype\_position.scss" />
+    <Content Include="Content\foundation-sites\prototype\_overflow.scss" />
+    <Content Include="Content\foundation-sites\prototype\_list-style-type.scss" />
+    <Content Include="Content\foundation-sites\prototype\_font-styling.scss" />
+    <Content Include="Content\foundation-sites\prototype\_display.scss" />
+    <Content Include="Content\foundation-sites\prototype\_box.scss" />
+    <Content Include="Content\foundation-sites\prototype\_bordered.scss" />
+    <Content Include="Content\foundation-sites\prototype\_border-none.scss" />
+    <Content Include="Content\foundation-sites\prototype\_border-box.scss" />
+    <Content Include="Content\foundation-sites\prototype\_arrow.scss" />
+    <Content Include="Content\foundation-sites\grid\_size.scss" />
+    <Content Include="Content\foundation-sites\grid\_row.scss" />
+    <Content Include="Content\foundation-sites\grid\_position.scss" />
+    <Content Include="Content\foundation-sites\grid\_layout.scss" />
+    <Content Include="Content\foundation-sites\grid\_gutter.scss" />
+    <Content Include="Content\foundation-sites\grid\_grid.scss" />
+    <Content Include="Content\foundation-sites\grid\_flex-grid.scss" />
+    <Content Include="Content\foundation-sites\grid\_column.scss" />
+    <Content Include="Content\foundation-sites\grid\_classes.scss" />
+    <Content Include="Content\foundation-sites\foundation.scss" />
+    <Content Include="Content\foundation-sites\forms\_text.scss" />
+    <Content Include="Content\foundation-sites\forms\_select.scss" />
+    <Content Include="Content\foundation-sites\forms\_range.scss" />
+    <Content Include="Content\foundation-sites\forms\_progress.scss" />
+    <Content Include="Content\foundation-sites\forms\_meter.scss" />
+    <Content Include="Content\foundation-sites\forms\_label.scss" />
+    <Content Include="Content\foundation-sites\forms\_input-group.scss" />
+    <Content Include="Content\foundation-sites\forms\_help-text.scss" />
+    <Content Include="Content\foundation-sites\forms\_forms.scss" />
+    <Content Include="Content\foundation-sites\forms\_fieldset.scss" />
+    <Content Include="Content\foundation-sites\forms\_error.scss" />
+    <Content Include="Content\foundation-sites\forms\_checkbox.scss" />
+    <Content Include="Content\foundation-sites\components\_visibility.scss" />
+    <Content Include="Content\foundation-sites\components\_top-bar.scss" />
+    <Content Include="Content\foundation-sites\components\_tooltip.scss" />
+    <Content Include="Content\foundation-sites\components\_title-bar.scss" />
+    <Content Include="Content\foundation-sites\components\_thumbnail.scss" />
+    <Content Include="Content\foundation-sites\components\_tabs.scss" />
+    <Content Include="Content\foundation-sites\components\_table.scss" />
+    <Content Include="Content\foundation-sites\components\_switch.scss" />
+    <Content Include="Content\foundation-sites\components\_sticky.scss" />
+    <Content Include="Content\foundation-sites\components\_slider.scss" />
+    <Content Include="Content\foundation-sites\components\_reveal.scss" />
+    <Content Include="Content\foundation-sites\components\_responsive-embed.scss" />
+    <Content Include="Content\foundation-sites\components\_progress-bar.scss" />
+    <Content Include="Content\foundation-sites\components\_pagination.scss" />
+    <Content Include="Content\foundation-sites\components\_orbit.scss" />
+    <Content Include="Content\foundation-sites\components\_off-canvas.scss" />
+    <Content Include="Content\foundation-sites\components\_menu.scss" />
+    <Content Include="Content\foundation-sites\components\_menu-icon.scss" />
+    <Content Include="Content\foundation-sites\components\_media-object.scss" />
+    <Content Include="Content\foundation-sites\components\_label.scss" />
+    <Content Include="Content\foundation-sites\components\_float.scss" />
+    <Content Include="Content\foundation-sites\components\_flex.scss" />
+    <Content Include="Content\foundation-sites\components\_flex-video.scss" />
+    <Content Include="Content\foundation-sites\components\_dropdown.scss" />
+    <Content Include="Content\foundation-sites\components\_dropdown-menu.scss" />
+    <Content Include="Content\foundation-sites\components\_drilldown.scss" />
+    <Content Include="Content\foundation-sites\components\_close-button.scss" />
+    <Content Include="Content\foundation-sites\components\_card.scss" />
+    <Content Include="Content\foundation-sites\components\_callout.scss" />
+    <Content Include="Content\foundation-sites\components\_button.scss" />
+    <Content Include="Content\foundation-sites\components\_button-group.scss" />
+    <Content Include="Content\foundation-sites\components\_breadcrumbs.scss" />
+    <Content Include="Content\foundation-sites\components\_badge.scss" />
+    <Content Include="Content\foundation-sites\components\_accordion.scss" />
+    <Content Include="Content\foundation-sites\components\_accordion-menu.scss" />
+    <Content Include="Content\foundation-rtl.min.css.map" />
+    <Content Include="Content\foundation-rtl.css.map" />
+    <Content Include="Content\foundation-prototype.min.css.map" />
+    <Content Include="Content\foundation-prototype.css.map" />
+    <Content Include="Content\foundation-float.min.css.map" />
+    <Content Include="Content\foundation-float.css.map" />
+    <Content Include="Content\foundation-icons\.DS_Store" />
+    <Content Include="Content\foundation-icons\.fontcustom-data" />
+    <Content Include="Content\foundation-icons\foundation-icons.eot" />
+    <Content Include="Content\foundation-icons\foundation-icons.ttf" />
+    <Content Include="Content\foundation-icons\foundation-icons.woff" />
+    <None Include="Scripts\jquery-3.4.1.intellisense.js" />
+    <Content Include="Scripts\bootstrap.js" />
+    <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="Scripts\jquery-3.4.1.js" />
+    <Content Include="Scripts\jquery-3.4.1.min.js" />
+    <Content Include="Scripts\jquery-3.4.1.slim.js" />
+    <Content Include="Scripts\jquery-3.4.1.slim.min.js" />
+    <Content Include="Scripts\modernizr-2.8.3.js" />
+    <Content Include="Scripts\plugins\foundation.abide.js" />
+    <Content Include="Scripts\plugins\foundation.abide.min.js" />
+    <Content Include="Scripts\plugins\foundation.accordion.js" />
+    <Content Include="Scripts\plugins\foundation.accordion.min.js" />
+    <Content Include="Scripts\plugins\foundation.accordionMenu.js" />
+    <Content Include="Scripts\plugins\foundation.accordionMenu.min.js" />
+    <Content Include="Scripts\plugins\foundation.core.js" />
+    <Content Include="Scripts\plugins\foundation.core.min.js" />
+    <Content Include="Scripts\plugins\foundation.drilldown.js" />
+    <Content Include="Scripts\plugins\foundation.drilldown.min.js" />
+    <Content Include="Scripts\plugins\foundation.dropdown.js" />
+    <Content Include="Scripts\plugins\foundation.dropdown.min.js" />
+    <Content Include="Scripts\plugins\foundation.dropdownMenu.js" />
+    <Content Include="Scripts\plugins\foundation.dropdownMenu.min.js" />
+    <Content Include="Scripts\plugins\foundation.equalizer.js" />
+    <Content Include="Scripts\plugins\foundation.equalizer.min.js" />
+    <Content Include="Scripts\plugins\foundation.interchange.js" />
+    <Content Include="Scripts\plugins\foundation.interchange.min.js" />
+    <Content Include="Scripts\plugins\foundation.magellan.js" />
+    <Content Include="Scripts\plugins\foundation.magellan.min.js" />
+    <Content Include="Scripts\plugins\foundation.offcanvas.js" />
+    <Content Include="Scripts\plugins\foundation.offcanvas.min.js" />
+    <Content Include="Scripts\plugins\foundation.orbit.js" />
+    <Content Include="Scripts\plugins\foundation.orbit.min.js" />
+    <Content Include="Scripts\plugins\foundation.responsiveAccordionTabs.js" />
+    <Content Include="Scripts\plugins\foundation.responsiveAccordionTabs.min.js" />
+    <Content Include="Scripts\plugins\foundation.responsiveMenu.js" />
+    <Content Include="Scripts\plugins\foundation.responsiveMenu.min.js" />
+    <Content Include="Scripts\plugins\foundation.responsiveToggle.js" />
+    <Content Include="Scripts\plugins\foundation.responsiveToggle.min.js" />
+    <Content Include="Scripts\plugins\foundation.reveal.js" />
+    <Content Include="Scripts\plugins\foundation.reveal.min.js" />
+    <Content Include="Scripts\plugins\foundation.slider.js" />
+    <Content Include="Scripts\plugins\foundation.slider.min.js" />
+    <Content Include="Scripts\plugins\foundation.smoothScroll.js" />
+    <Content Include="Scripts\plugins\foundation.smoothScroll.min.js" />
+    <Content Include="Scripts\plugins\foundation.sticky.js" />
+    <Content Include="Scripts\plugins\foundation.sticky.min.js" />
+    <Content Include="Scripts\plugins\foundation.tabs.js" />
+    <Content Include="Scripts\plugins\foundation.tabs.min.js" />
+    <Content Include="Scripts\plugins\foundation.toggler.js" />
+    <Content Include="Scripts\plugins\foundation.toggler.min.js" />
+    <Content Include="Scripts\plugins\foundation.tooltip.js" />
+    <Content Include="Scripts\plugins\foundation.tooltip.min.js" />
+    <Content Include="Scripts\plugins\foundation.util.box.js" />
+    <Content Include="Scripts\plugins\foundation.util.box.min.js" />
+    <Content Include="Scripts\plugins\foundation.util.imageLoader.js" />
+    <Content Include="Scripts\plugins\foundation.util.imageLoader.min.js" />
+    <Content Include="Scripts\plugins\foundation.util.keyboard.js" />
+    <Content Include="Scripts\plugins\foundation.util.keyboard.min.js" />
+    <Content Include="Scripts\plugins\foundation.util.mediaQuery.js" />
+    <Content Include="Scripts\plugins\foundation.util.mediaQuery.min.js" />
+    <Content Include="Scripts\plugins\foundation.util.motion.js" />
+    <Content Include="Scripts\plugins\foundation.util.motion.min.js" />
+    <Content Include="Scripts\plugins\foundation.util.nest.js" />
+    <Content Include="Scripts\plugins\foundation.util.nest.min.js" />
+    <Content Include="Scripts\plugins\foundation.util.timer.js" />
+    <Content Include="Scripts\plugins\foundation.util.timer.min.js" />
+    <Content Include="Scripts\plugins\foundation.util.touch.js" />
+    <Content Include="Scripts\plugins\foundation.util.touch.min.js" />
+    <Content Include="Scripts\plugins\foundation.util.triggers.js" />
+    <Content Include="Scripts\plugins\foundation.util.triggers.min.js" />
+    <Content Include="Scripts\WebForms\DetailsView.js" />
+    <Content Include="Scripts\WebForms\Focus.js" />
+    <Content Include="Scripts\WebForms\GridView.js" />
+    <Content Include="Scripts\WebForms\Menu.js" />
+    <Content Include="Scripts\WebForms\MenuStandards.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjax.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxApplicationServices.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxComponentModel.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxCore.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxGlobalization.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxHistory.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxNetwork.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxSerialization.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxTimer.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxWebForms.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxWebServices.js" />
+    <Content Include="Scripts\WebForms\SmartNav.js" />
+    <Content Include="Scripts\WebForms\TreeView.js" />
+    <Content Include="Scripts\WebForms\WebForms.js" />
+    <Content Include="Scripts\WebForms\WebParts.js" />
+    <Content Include="Scripts\WebForms\WebUIValidation.js" />
+    <Content Include="Scripts\what-input.js" />
+    <Content Include="Scripts\what-input.min.js" />
+    <Content Include="Site.Master" />
+    <Content Include="ViewSwitcher.ascx" />
+    <Content Include="Web.config" />
+    <Content Include="Bundle.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Account\AddPhoneNumber.aspx.cs">
+      <DependentUpon>AddPhoneNumber.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\AddPhoneNumber.aspx.designer.cs">
+      <DependentUpon>AddPhoneNumber.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\Confirm.aspx.cs">
+      <DependentUpon>Confirm.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\Confirm.aspx.designer.cs">
+      <DependentUpon>Confirm.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\Forgot.aspx.cs">
+      <DependentUpon>Forgot.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\Forgot.aspx.designer.cs">
+      <DependentUpon>Forgot.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\Lockout.aspx.cs">
+      <DependentUpon>Lockout.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\Lockout.aspx.designer.cs">
+      <DependentUpon>Lockout.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\Manage.aspx.cs">
+      <DependentUpon>Manage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\Manage.aspx.designer.cs">
+      <DependentUpon>Manage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\ManageLogins.aspx.cs">
+      <DependentUpon>ManageLogins.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\ManageLogins.aspx.designer.cs">
+      <DependentUpon>ManageLogins.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\ManagePassword.aspx.cs">
+      <DependentUpon>ManagePassword.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\ManagePassword.aspx.designer.cs">
+      <DependentUpon>ManagePassword.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\OpenAuthProviders.ascx.cs">
+      <DependentUpon>OpenAuthProviders.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\OpenAuthProviders.ascx.designer.cs">
+      <DependentUpon>OpenAuthProviders.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\Register.aspx.cs">
+      <DependentUpon>Register.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\Register.aspx.designer.cs">
+      <DependentUpon>Register.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\RegisterExternalLogin.aspx.cs">
+      <DependentUpon>RegisterExternalLogin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\RegisterExternalLogin.aspx.designer.cs">
+      <DependentUpon>RegisterExternalLogin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\ResetPassword.aspx.cs">
+      <DependentUpon>ResetPassword.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\ResetPassword.aspx.designer.cs">
+      <DependentUpon>ResetPassword.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\ResetPasswordConfirmation.aspx.cs">
+      <DependentUpon>ResetPasswordConfirmation.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\ResetPasswordConfirmation.aspx.designer.cs">
+      <DependentUpon>ResetPasswordConfirmation.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\TwoFactorAuthenticationSignIn.aspx.cs">
+      <DependentUpon>TwoFactorAuthenticationSignIn.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\TwoFactorAuthenticationSignIn.aspx.designer.cs">
+      <DependentUpon>TwoFactorAuthenticationSignIn.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\VerifyPhoneNumber.aspx.cs">
+      <DependentUpon>VerifyPhoneNumber.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\VerifyPhoneNumber.aspx.designer.cs">
+      <DependentUpon>VerifyPhoneNumber.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="App_Start\BundleConfig.cs" />
+    <Compile Include="About.aspx.cs">
+      <DependentUpon>About.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="About.aspx.designer.cs">
+      <DependentUpon>About.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="App_Start\IdentityConfig.cs" />
+    <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="App_Start\Startup.Auth.cs" />
+    <Compile Include="Constants.cs" />
+    <Compile Include="Contact.aspx.cs">
+      <DependentUpon>Contact.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Contact.aspx.designer.cs">
+      <DependentUpon>Contact.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="EditHome.aspx.cs">
+      <DependentUpon>EditHome.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="EditHome.aspx.designer.cs">
+      <DependentUpon>EditHome.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Home.cs" />
+    <Compile Include="Models\HomeDbContext.cs" />
+    <Compile Include="Models\IdentityModels.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Site.Master.cs">
+      <DependentUpon>Site.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Site.Master.designer.cs">
+      <DependentUpon>Site.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Startup.cs" />
+    <Compile Include="ViewSwitcher.ascx.cs">
+      <DependentUpon>ViewSwitcher.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ViewSwitcher.ascx.designer.cs">
+      <DependentUpon>ViewSwitcher.ascx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+    <Content Include="Scripts\jquery-3.4.1.slim.min.map" />
+    <Content Include="Scripts\jquery-3.4.1.min.map" />
+    <Content Include="Scripts\plugins\foundation.util.triggers.min.js.map" />
+    <Content Include="Scripts\plugins\foundation.util.triggers.js.map" />
+    <Content Include="Scripts\plugins\foundation.util.touch.min.js.map" />
+    <Content Include="Scripts\plugins\foundation.util.touch.js.map" />
+    <Content Include="Scripts\plugins\foundation.util.timer.min.js.map" />
+    <Content Include="Scripts\plugins\foundation.util.timer.js.map" />
+    <Content Include="Scripts\plugins\foundation.util.nest.min.js.map" />
+    <Content Include="Scripts\plugins\foundation.util.nest.js.map" />
+    <Content Include="Scripts\plugins\foundation.util.motion.min.js.map" />
+    <Content Include="Scripts\plugins\foundation.util.motion.js.map" />
+    <Content Include="Scripts\plugins\foundation.util.mediaQuery.min.js.map" />
+    <Content Include="Scripts\plugins\foundation.util.mediaQuery.js.map" />
+    <Content Include="Scripts\plugins\foundation.util.keyboard.min.js.map" />
+    <Content Include="Scripts\plugins\foundation.util.keyboard.js.map" />
+    <Content Include="Scripts\plugins\foundation.util.imageLoader.min.js.map" />
+    <Content Include="Scripts\plugins\foundation.util.imageLoader.js.map" />
+    <Content Include="Scripts\plugins\foundation.util.box.min.js.map" />
+    <Content Include="Scripts\plugins\foundation.util.box.js.map" />
+    <Content Include="Scripts\plugins\foundation.tooltip.min.js.map" />
+    <Content Include="Scripts\plugins\foundation.tooltip.js.map" />
+    <Content Include="Scripts\plugins\foundation.toggler.min.js.map" />
+    <Content Include="Scripts\plugins\foundation.toggler.js.map" />
+    <Content Include="Scripts\plugins\foundation.tabs.min.js.map" />
+    <Content Include="Scripts\plugins\foundation.tabs.js.map" />
+    <Content Include="Scripts\plugins\foundation.sticky.min.js.map" />
+    <Content Include="Scripts\plugins\foundation.sticky.js.map" />
+    <Content Include="Scripts\plugins\foundation.smoothScroll.min.js.map" />
+    <Content Include="Scripts\plugins\foundation.smoothScroll.js.map" />
+    <Content Include="Scripts\plugins\foundation.slider.min.js.map" />
+    <Content Include="Scripts\plugins\foundation.slider.js.map" />
+    <Content Include="Scripts\plugins\foundation.reveal.min.js.map" />
+    <Content Include="Scripts\plugins\foundation.reveal.js.map" />
+    <Content Include="Scripts\plugins\foundation.responsiveToggle.min.js.map" />
+    <Content Include="Scripts\plugins\foundation.responsiveToggle.js.map" />
+    <Content Include="Scripts\plugins\foundation.responsiveMenu.min.js.map" />
+    <Content Include="Scripts\plugins\foundation.responsiveMenu.js.map" />
+    <Content Include="Scripts\plugins\foundation.responsiveAccordionTabs.min.js.map" />
+    <Content Include="Scripts\plugins\foundation.responsiveAccordionTabs.js.map" />
+    <Content Include="Scripts\plugins\foundation.orbit.min.js.map" />
+    <Content Include="Scripts\plugins\foundation.orbit.js.map" />
+    <Content Include="Scripts\plugins\foundation.offcanvas.min.js.map" />
+    <Content Include="Scripts\plugins\foundation.offcanvas.js.map" />
+    <Content Include="Scripts\plugins\foundation.magellan.min.js.map" />
+    <Content Include="Scripts\plugins\foundation.magellan.js.map" />
+    <Content Include="Scripts\plugins\foundation.interchange.min.js.map" />
+    <Content Include="Scripts\plugins\foundation.interchange.js.map" />
+    <Content Include="Scripts\plugins\foundation.equalizer.min.js.map" />
+    <Content Include="Scripts\plugins\foundation.equalizer.js.map" />
+    <Content Include="Scripts\plugins\foundation.dropdownMenu.min.js.map" />
+    <Content Include="Scripts\plugins\foundation.dropdownMenu.js.map" />
+    <Content Include="Scripts\plugins\foundation.dropdown.min.js.map" />
+    <Content Include="Scripts\plugins\foundation.dropdown.js.map" />
+    <Content Include="Scripts\plugins\foundation.drilldown.min.js.map" />
+    <Content Include="Scripts\plugins\foundation.drilldown.js.map" />
+    <Content Include="Scripts\plugins\foundation.core.min.js.map" />
+    <Content Include="Scripts\plugins\foundation.core.js.map" />
+    <Content Include="Scripts\plugins\foundation.accordionMenu.min.js.map" />
+    <Content Include="Scripts\plugins\foundation.accordionMenu.js.map" />
+    <Content Include="Scripts\plugins\foundation.accordion.min.js.map" />
+    <Content Include="Scripts\plugins\foundation.accordion.js.map" />
+    <Content Include="Scripts\plugins\foundation.abide.min.js.map" />
+    <Content Include="Scripts\plugins\foundation.abide.js.map" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>65135</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>https://localhost:44319/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\EntityFramework.6.4.4\build\EntityFramework.props'))" />
+    <Error Condition="!Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\EntityFramework.6.4.4\build\EntityFramework.targets'))" />
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  <Import Project="..\packages\EntityFramework.6.4.4\build\EntityFramework.targets" Condition="Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.targets')" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
