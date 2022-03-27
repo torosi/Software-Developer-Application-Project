@@ -496,6 +496,7 @@
     <Content Include="Content\bootstrap-theme.min.css.map" />
     <Content Include="Content\bootstrap-theme.css.map" />
     <Content Include="Account\Web.config" />
+    <Content Include="script.sql" />
     <Content Include="Scripts\foundation.cjs.js" />
     <Content Include="Scripts\foundation.es6.js" />
     <Content Include="Scripts\foundation.esm.js" />
