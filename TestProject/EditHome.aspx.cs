@@ -64,9 +64,6 @@ namespace TestProject
             var offer3Title = Request.Form["offer3Title"];
             _homeDbContext.Homes.FirstOrDefault(x => x.Key == Constants.offer3Title).Content = offer3Title;
 
-            var offer4Title = Request.Form["offer4Title"];
-            _homeDbContext.Homes.FirstOrDefault(x => x.Key == Constants.offer4Title).Content = offer4Title;
-
             _homeDbContext.SaveChanges();
 
             SetFormInputs();
