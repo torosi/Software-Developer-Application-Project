@@ -33,13 +33,13 @@ namespace TestProject
             _homeDbContext.Homes.FirstOrDefault(x => x.Key == Constants.box1Text).Content = box1Text;
 
             var box2Text = Request.Form["box2Text"];
-            _homeDbContext.Homes.FirstOrDefault(x => x.Key == Constants.box2Title).Content = box2Text;
+            _homeDbContext.Homes.FirstOrDefault(x => x.Key == Constants.box2Text).Content = box2Text;
 
             var box3Text = Request.Form["box3Text"];
-            _homeDbContext.Homes.FirstOrDefault(x => x.Key == Constants.box3Title).Content = box3Text;
+            _homeDbContext.Homes.FirstOrDefault(x => x.Key == Constants.box3Text).Content = box3Text;
 
             var box4Text = Request.Form["box4Text"];
-            _homeDbContext.Homes.FirstOrDefault(x => x.Key == Constants.box4Title).Content = box4Text;
+            _homeDbContext.Homes.FirstOrDefault(x => x.Key == Constants.box4Text).Content = box4Text;
 
             // Buttons
             var box1Button = Request.Form["box1Button"];
